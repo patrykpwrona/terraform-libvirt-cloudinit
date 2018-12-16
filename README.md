@@ -24,7 +24,7 @@ terraform destroy
 ```
 ### Sources
 Created (not so easy) based on:
-* [https://titosoft.github.io/kvm/terraform-and-kvm/] (some things not actual)
-* [https://www.terraform.io/docs/configuration/interpolation.html]
-* [https://github.com/dmacvicar/terraform-provider-libvirt/blob/master/examples/count/main.tf]
-* [https://github.com/dmacvicar/terraform-provider-libvirt/blob/master/website/docs/r]
+* https://titosoft.github.io/kvm/terraform-and-kvm/ (some things not actual)
+* https://www.terraform.io/docs/configuration/interpolation.html
+* https://github.com/dmacvicar/terraform-provider-libvirt/blob/master/examples/count/main.tf
+* https://github.com/dmacvicar/terraform-provider-libvirt/blob/master/website/docs/r
