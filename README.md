@@ -4,6 +4,11 @@ Simple example of using terraform with libvirt plugin.
 ### Overview
 Using Terraform to setting a cluster of N identical local QEMU virtual machines.
 
+### Enviroment
+Tested on:
+* Ubuntu 18.04
+* Terraform 0.11.10
+
 ### Installation
 TBD
 
@@ -14,6 +19,9 @@ terraform init
 
 Create plan of how to change enviroment
 terraform plan -out=terraplan
+
+You can also define number of insances
+TF_NUMBER_OF_INSTANCES=5 terraform plan -out=terraplan
 
 Apply plan and execute it
 terraform apply terraplan
