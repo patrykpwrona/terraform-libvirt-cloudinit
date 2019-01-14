@@ -9,6 +9,12 @@ variable "number_of_instances" {
   default     = 3
 }
 
+# Instance disk
+variable "instance_disk_size" {
+  description = "Disk size of instance in GB"
+  default     = 5
+}
+
 # We fetch the latest ubuntu release image from their mirrors and create base image
 resource "libvirt_volume" "ubuntu_base_image" {
   name   = "ubuntu_base_image.qcow2"
@@ -23,6 +29,8 @@ resource "libvirt_volume" "terra_disk" {
   base_volume_id = "${libvirt_volume.ubuntu_base_image.id}"
   count          = "${var.number_of_instances}"
   pool           = "ssd_vms" #CHANGE THIS - name of resource pool in libvirt
+  format         = "qcow2"
+  size           = "${var.instance_disk_size * 1024 * 1024 * 1024}"
 }
 
 # Create a network for our VMs
