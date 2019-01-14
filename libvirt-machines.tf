@@ -38,6 +38,7 @@ resource "libvirt_network" "terra_network" {
   name      = "terra_network"
   addresses = ["10.50.0.0/24"]
   mode      = "nat"
+  autostart = "true"
   # dhcp {
   #   enabled = true
   # }
